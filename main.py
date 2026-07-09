@@ -1,14 +1,16 @@
 import random
 
 from fastmcp import FastMCP
+from fastmcp.server.auth import OAuthProvider
 
+auth = OAuthProvider(
+    issuer_url="https://1dvsgenai-mcp-server.fastmcp.app"
+)
 
-
-# Create a FastMCP server instance
-
-mcp = FastMCP(name="Simple Calculator Server")
-
-
+mcp = FastMCP(
+    name="Simple Calculator Server",
+    auth=auth
+)
 
 
 
